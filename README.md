@@ -1,1 +1,2 @@
-# swe645_project
+# SWE645 Spring 2020
+Web App Project
