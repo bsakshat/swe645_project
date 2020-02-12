@@ -11,7 +11,7 @@
     <title>SWE645 Spring 2020</title>
   </head>
   <body>
-  Hello World!
-    <br><b><a href="survey.html">Student Survey</a></b>
+  <h3>SWE645 Spring 2020</h3>
+    <br><b>Assignment 1: <a href="survey.html">Student Survey Form</a></b>
   </body>
 </html>
