@@ -1,2 +1,6 @@
 /web/
 /out/
+/webapp/target/classes/
+/webapp/target/maven-archiver/
+/webapp/target/maven-status/
+/webapp/target/swe645_spr20/
