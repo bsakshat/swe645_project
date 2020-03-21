@@ -4,9 +4,16 @@ pipeline {
         maven 'maven'
     }
     stages {
-        stage('Build'){
+        stage('Build WAR file'){
             steps{
                 sh script: 'mvn -f webapp/pom.xml clean package'
+            }
+        }
+        stage('make docker image'){
+            steps{
+                script {
+                    webapp = docker.build("bsakshat/swe645-spr20:${env.BUILD_ID}")
+                }
             }
         }
     }
