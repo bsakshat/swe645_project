@@ -12,7 +12,7 @@ pipeline {
         stage('make docker image'){
             steps{
                 script {
-                    webapp = docker.build("bsakshat/swe645-spr20:${env.BUILD_ID}")
+                    webapp = docker.build("bsakshat/swe645-spr20:v${env.BUILD_ID}")
                 }
             }
         }
