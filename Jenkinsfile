@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build'){
             steps{
-                sh script: 'mvn -f ./webapp/pom.xml clean package'
+                sh script: 'mvn -f webapp/pom.xml clean package'
             }
         }
     }
