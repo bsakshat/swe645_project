@@ -9,7 +9,7 @@ pipeline {
                 sh script: 'mvn -f webapp/pom.xml clean package'
             }
         }
-        stage('Make and Push Docker image'){
+        stage('Make and Push Docker Image'){
             steps{
                 script {
                     webapp = docker.build("bsakshat/swe645-spr20:v${env.BUILD_ID}")
