@@ -5,7 +5,7 @@ pipeline {
         APP = 'webapp'
         CLUSTER = 'swe645'
         CLUSTER_ZONE = 'us-east4-c'
-        CREDENTIALS = '${PROJECT_ID}'
+        CREDENTIALS = 'swe645-spr20'
     }
     tools {
         maven 'maven'
