@@ -9,13 +9,14 @@ pipeline {
                 sh script: 'mvn -f webapp/pom.xml clean package'
             }
         }
-        stage('make docker image'){
+        stage('make and push docker image'){
             steps{
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub')
-                        webapp = docker.build("bsakshat/swe645-spr20:v${env.BUILD_ID}")
+                    webapp = docker.build("bsakshat/swe645-spr20:v${env.BUILD_ID}")
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
                         webapp.push('latest')
                         webapp.push("v${env.BUILD_ID}")
+                    }
                 }
             }
         }
