@@ -9,5 +9,6 @@
   <body>
   <h2>SWE645 Spring 2020</h2>
     <br><b>Assignment 1: <a href="survey.html">Student Survey Form</a></b>
+    <br>Just checking the pipeline
   </body>
 </html>
