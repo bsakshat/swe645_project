@@ -27,9 +27,12 @@ metadata:
   labels:
       app: webapp
 spec:
-  ports:
-  - port: 80
-    targetPort: 8080
   selector:
     app: webapp
-  type: LoadBalancer
+  type: NodePort
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 80
