@@ -12,9 +12,10 @@ pipeline {
         stage('make docker image'){
             steps{
                 script {
-                    docker.withRegistry('', 'dockerhub')
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub')
                         webapp = docker.build("bsakshat/swe645-spr20:v${env.BUILD_ID}")
-                        webapp.push()
+                        webapp.push('latest')
+                        webapp.push("v${env.BUILD_ID}")
                 }
             }
         }
